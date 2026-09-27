@@ -16,9 +16,6 @@ Over the years I've gone from writing my first production endpoints to designing
 
 ## Projects
 
-**VasWeb** — *.NET Core*
-A Direct Carrier Billing platform that works with Turkish mobile operators, letting users pay for subscriptions through their phone bill. Most of the interesting problems here were on the operator side: MSISDN header enrichment that only works over HTTP, encrypted token exchange with a PHP service, and tracking down renewal failures caused by a single misconfigured error-code mapping.
-
 **E-Commerce Platform** — *.NET Core Web API, Next.js, PostgreSQL* (in progress)
 A B2C and B2B e-commerce system split into a separate API and frontend. Uses EF Core, Serilog with Seq for logging, and a payment adapter layer so providers like PayTR can be swapped without touching the core. Marketplace integrations (Trendyol, Hepsiburada, N11) are planned for later phases.
 
