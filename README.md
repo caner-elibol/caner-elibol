@@ -22,8 +22,12 @@ A Direct Carrier Billing platform that works with Turkish mobile operators, lett
 **E-Commerce Platform** — *.NET Core Web API, Next.js, PostgreSQL* (in progress)
 A B2C and B2B e-commerce system split into a separate API and frontend. Uses EF Core, Serilog with Seq for logging, and a payment adapter layer so providers like PayTR can be swapped without touching the core. Marketplace integrations (Trendyol, Hepsiburada, N11) are planned for later phases.
 
-**Sosyolobi** — *Next.js, Tailwind, MapLibre*
-A location-based social platform for discovering events around you. I've been reworking the UI: a map-first layout with color-coded pins, a filterable event sidebar, and a darker, cleaner visual style.
+**Sosyolobi** — *.NET Core, PostgreSQL + PostGIS, Next.js, WebSockets*
+A location-based social platform where people find things happening around them and join in. Any user can create an event, others can send a request to join, and the organizer decides who gets in. Once someone is accepted, they're added to the event's group chat, so the conversation can start before everyone meets.
+
+I built the backend in .NET Core on top of PostgreSQL with PostGIS. PostGIS handles the geographic side: finding nearby events within a radius and sorting them by distance, done in the database rather than in application code. The chat and notifications run over WebSockets, so messages, join requests, approvals and event updates show up instantly instead of waiting for a refresh. Users who are offline still get their notifications stored and delivered the next time they open the app. On the frontend, Next.js with a MapLibre map shows events as color-coded pins next to a filterable event list.
+
+There's also a ready-to-use Android app, shipped as an APK: install it and it works right away. It talks to the same .NET Core backend as the web version, with the same real-time connection, so a message sent from the web shows up on the phone instantly and the other way around. Events, join requests, group chats and notifications are all live on mobile too.
 
 **Live News Aggregator** — *PHP 7.4, MySQL*
 A Turkish tech and finance news site that pulls from multiple sources in near real time. I deliberately built it without a framework, Composer, or Docker, just to see how far plain PHP can go. Cron-based fetching, MySQL full-text search, and long polling for live updates.
@@ -34,7 +38,7 @@ A cross-platform mobile app for prayer times, with a choice between Diyanet data
 ## Tech
 
 **Backend:** C#, .NET Core, ASP.NET Core, Entity Framework Core, PHP, Laravel
-**Data & Messaging:** SQL Server, PostgreSQL, MySQL, Redis, RabbitMQ
+**Data & Messaging:** SQL Server, PostgreSQL, PostGIS, MySQL, Redis, RabbitMQ, WebSockets
 **Frontend:** JavaScript, Next.js, React, HTML, CSS, Tailwind
 **DevOps & Tools:** Docker, Nginx, Apache, Git
 **Also used:** Java, Python (NumPy, Pandas), Flutter
