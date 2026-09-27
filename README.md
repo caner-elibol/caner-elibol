@@ -2,7 +2,7 @@
 Pronouns: He/His<br>🔭 I’m currently working on FinTech.<br>🌱 I’m currently learning more about FinTech Development.<br>🤔 I’m looking for help for Flutter development documentation.<br>💬 Ask me about .Net Core, PHP or any tech-related stuff.<br>📫 How to reach me: Check social links below.<br>⚡ Fun fact: I spend almost 6 hours listening to songs every day. And i playing the guitar when i got something to think about.
 
 
-## 🌐 Socials:
+## Socials:
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/canerelibol) [![Medium](https://img.shields.io/badge/Medium-12100E?logo=medium&logoColor=white)](https://medium.com/@elibol97)[![Twitter](https://img.shields.io/badge/Twitter-%231DA1F2.svg?logo=Twitter&logoColor=white)](https://twitter.com/elblcnr) 
 
 #Tech Stack:
